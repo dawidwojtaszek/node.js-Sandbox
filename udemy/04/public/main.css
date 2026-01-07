@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background-color: #181926;
+  color: #cad3f5;
+}
+
+nav {
+  background-color: #24273a;
+  padding: 20px 0 20px 0;
+  width: 100%;
+  margin-bottom: 20px;
+
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list li {
+  padding: 10px;
+  list-style: none;
+
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #a6da95;
+}
