@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Add product</title>
-  <link href="/main.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+  <title>
+    <%= title %>
+  </title>
 </head>
 
 <body>
-
   <nav>
     <div class="container">
       <ul class="nav-list">
@@ -19,12 +20,17 @@
     </div>
 
   </nav>
-  <main class="container">
-    <form action="/admin/add-product" method="POST">
-      <input type="text" name="product" />
-      <button type="submit">Add Product</button>
-    </form>
 
+  <main class="container">
+    <h1>Shop</h1>
+    <p>List of products:</p>
+    <% if(products.length>0){ %>
+      <% for(let product of products){ %>
+        <span>title: <%= product.title %></span>
+
+        <% }}else{ %>
+          <p>no found</p>
+          <% } %>
   </main>
 </body>
 
