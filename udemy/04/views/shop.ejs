@@ -1,37 +1,17 @@
-<!DOCTYPE html>
-<html lang="">
+<%- include('./includes/head.ejs') %>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="main.css" rel="stylesheet">
-  <title>
-    <%= title %>
-  </title>
-</head>
+  <body>
+    <%- include('./includes/navigation.ejs') %>
+      <main class="container">
+        <h1>Shop</h1>
+        <p>List of products:</p>
+        <% if(products.length>0){ %>
+          <% for(let product of products){ %>
+            <span>title: <%= product.title %></span>
 
-<body>
-  <nav>
-    <div class="container">
-      <ul class="nav-list">
-        <li><a href="/">Shop</a></li>
-        <li><a href="/admin/add-product">Add product</a></li>
-      </ul>
-    </div>
-
-  </nav>
-
-  <main class="container">
-    <h1>Shop</h1>
-    <p>List of products:</p>
-    <% if(products.length>0){ %>
-      <% for(let product of products){ %>
-        <span>title: <%= product.title %></span>
-
-        <% }}else{ %>
-          <p>no found</p>
-          <% } %>
-  </main>
-</body>
-
-</html>
+            <% }}else{ %>
+              <p>no found</p>
+              <% } %>
+      </main>
+      <%- include('./includes/end.ejs') %>
